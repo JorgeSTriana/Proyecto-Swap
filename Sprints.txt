@@ -1,0 +1,50 @@
+
+SPRINTS DE PROYECTO
+
+Los entregables de cada sprint deben ser los siguientes:
+
+1. Sprint 0: Entrega en última clase semana 2
+i. Product Backlook priorizado
+ii. Repositorio (GitHub) donde integrarán el trabajo
+iii. Gestión de configuración.
+iv. Historias de usuario a desarrollar en el Sprint 1.
+v. DevOps (Scrumboard y tareas).
+
+
+2. Sprint 1: Entrega en última clase semana 3
+i. Presentación MVC
+1. Interfases gráficas de usuario
+2. Navegación entre interfases
+ii. Informe de retrospectiva
+
+
+3. Sprint 2: Entrega en última clase semana 4
+i. Presentación MVC
+1. Interfases gráficas de usuario
+2. Navegación entre interfases
+ii. Informe de retrospectiva
+iii. Historias de usuario a desarrollar en el sprint 2
+
+
+4. Sprint 3: Entrega en última clase semana 5
+i. Presentación MVC
+1. Implementación de la lógica de negocio
+2. Pruebas unitarias de la lógica desarrollada
+ii. Informe de retrospectiva
+iii. Historias de usuario a desarrollar en el sprint 3
+
+
+5. Sprint 4: Entrega en última clase semana 6
+i. Presentación MVC
+1. Aplicación con persistencia local en MongoDB
+2. Pruebas unitarias de la lógica desarrollada
+ii. Informe de retrospectiva
+iii. Historias de usuario a desarrollar en el sprint 4
+
+
+6. Sprint 5: Entrega en última clase semana 7
+i. Presentación MVC
+1. Despliegue Back-End en Heroku
+2. Despliegue base de datos en MongoAtlas
+ii. Informe de retrospectiva
+iii. Historias de usuario a desarrollar en el sprint 5
