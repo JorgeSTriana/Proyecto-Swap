@@ -1,0 +1,20 @@
+{
+  "name": "Proyecto-Swap",
+  "version": "1.0.0",
+  "description": "proyecto de intercambio de objetos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yleonm/Proyecto-Swap.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yleonm/Proyecto-Swap/issues"
+  },
+  "homepage": "https://github.com/yleonm/Proyecto-Swap#readme"
+}
