@@ -1,3 +1,6 @@
+const Handlebars = require('Handlebars');
+const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access');
+
 const path = require('path');
 const exphbs = require('express-handlebars');  //exphbs = express-handlebars
 
@@ -18,7 +21,8 @@ module.exports = app => {
         partialsDir : path.join(app.get('views'), 'partials'),
         layoutsDir: path.join(app.get('views'), 'layouts'),
         extname: '.hbs',
-        helpers: require('./helpers')
+        helpers: require('./helpers'),
+        handlebars: allowInsecurePrototypeAccess(Handlebars),
     }));                                                   //.hbs = handlebars
     app.set('view engine','.hbs');
     

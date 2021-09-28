@@ -1,5 +1,6 @@
 /* Este archivo solo tendra la información relacionada a la imagen */
 const mongoose = require('mongoose');
+/* const mongooseLeanVirtuals = require('mongoose-lean-virtuals'); */ 
 const {Schema} = mongoose;
 const path = require('path');
 
@@ -12,9 +13,10 @@ const ImageSchema= new Schema({
      timestamp: {type: Date, default: Date.now}
 });
 
-ImageSchema.virtual('uniqueId')
-       .get(function(){
-            return this.filename.replace(path.extname(this.filename),'')
+ImageSchema.virtual("uniqueId")
+     .get(function(){
+            return this.filename.replace(path.extname(this.filename),"");
        });
 
+/* ImageSchema.plugin(mongooseLeanVirtuals); */      
 module.exports = mongoose.model('Image',ImageSchema);
