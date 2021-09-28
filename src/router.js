@@ -1,28 +1,40 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Login from '@views/auth/Login';
+/* import Login from '@views/auth/Login'; */
 import Swap from '@/views/Swap'
-import Perfil from '@components/Perfil';
-/* import { component } from 'vue/types/umd'; */
+import Perfil from '@/views/Perfil';
+import Cambio from '@/views/Cambio';
+import Error from '@/views/Error404';
+
 
 
 Vue.use(Router);
 
 export default new Router({
 /* const router = new Router({  */  //para login
-    mode:history,       //parte de configuracion de vue 
+    mode: 'history',       //parte de configuracion de vue 
     routes:[
         {
-            path: '/',
+            path: '/Swap',
             name: 'swap',
             component: Swap
         },
         {
-            path: 'perfil',     //cada ruta es un objeto path ruta a donde me dirijo despues del /
+            path: '/Perfil',     //cada ruta es un objeto path ruta a donde me dirijo despues del /
             name: 'perfil',
             component: Perfil
         },
         {
+            path: '*',     //cada ruta es un objeto path ruta a donde me dirijo despues del /
+            name: 'error',
+            component: Error
+        },
+        {
+            path: '/Cambio',     //cada ruta es un objeto path ruta a donde me dirijo despues del /
+            name: 'Cambio',
+            component: Cambio
+        },
+        /* {
             path: '/user/:id',
             name: 'user-detail',
             component: UserDetail,
@@ -34,11 +46,11 @@ export default new Router({
             path: '/login',
             name: 'login',
             component: Login
-        }
+        } */
     ]
 });
 
-router.beforeEach((to, from, next)=>{
+/* router.beforeEach((to, from, next)=>{
     if(to.meta.requiresAuth){
 //todo
         console.log(from);
@@ -55,3 +67,4 @@ router.beforeEach((to, from, next)=>{
 
 });
 
+ */
