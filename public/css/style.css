@@ -70,7 +70,7 @@ header .navbar a:hover {
     color: #666;
     border: .1rem solid #666;
     border-radius: .3rem;
-    padding: .5rem 1.5rem;
+    padding: .5rem 2rem;
     display: none;          /* ocultamos el menu */
 }
 
@@ -95,7 +95,7 @@ header .navbar a:hover {
 .home{
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 2rem;
     min-height: 100vh;
     align-items: center;
     background: url(/img/img_product2.jpg) no-repeat;  /* pendiente fondo */
@@ -192,7 +192,7 @@ header .navbar a:hover {
 .popular .box-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .popular .box-container .box {
@@ -283,7 +283,7 @@ header .navbar a:hover {
 .product .box-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem
+    gap: 2rem
 }
 
 .product .box-container .box {
@@ -324,7 +324,7 @@ header .navbar a:hover {
 }
 
 .product .box .box .content p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #666;
     padding: 1rem 0;
 }
@@ -332,7 +332,7 @@ header .navbar a:hover {
 .review .box-container{
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .review .box-container .box {
@@ -368,7 +368,7 @@ header .navbar a:hover {
 }
 
 .review .box-container .box p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #eee;
     padding: 1rem 0;
 }
@@ -428,7 +428,7 @@ header .navbar a:hover {
     background: #fff;
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 2rem;
     border-radius: .5rem;
 }
 .order .row .image {
@@ -493,7 +493,7 @@ header .navbar a:hover {
 
 .footer .share {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -513,7 +513,7 @@ header .navbar a:hover {
     position: fixed;
     top: -120%;
     right: 2rem;
-    padding: .5rem 1.5rem;
+    padding: .5rem 2rem;
     font-size: 4rem;
     background: #e01021;
     color: #fff;
@@ -526,9 +526,94 @@ header .navbar a:hover {
     top: calc(100% - 12rem);
 }
 
+/* ================================= ESTILOS CAMBIO ======================= */
+.home-cambio{
+    /* padding: 100; */
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 2rem;
+    min-height: 100vh;
+    align-items: center;
+    background: url(/img/img_product2.jpg) no-repeat;  /* pendiente fondo */
+    /* background: rgb(184, 235, 235); */
+    background-size: cover;
+    background-position: center;
+}
+
+.heading-cambio{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 3rem;
+    padding: 1rem;
+    color: #000;
+}
+.box-container .box img {
+    height: 25rem;
+    object-fit: cover;
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.box-container .box .detalles{
+    padding: 2rem;
+    margin: 1rem 0;
+    font-size: 1.3rem;
+    color: #333;
+    text-transform: none;
+    border: .2rem solid rgba(0, 0, 0, 0.3);
+    border-radius: .5rem;
+     /* width: 49%; */
+}
+
+.box-container .box .detalles .descripcion{
+    padding: 1rem;
+    margin: 1rem 0;
+    border: .1rem solid rgba(0, 0, 0, 0.3);
+    border-radius: .5rem;
+    background: rgb(212, 211, 211);
+    /*font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    
+    
+    width: 49%; */
+}
+
+.box-container .box .navbar-products a{
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    color: #666;
+}
+
+.box-container .box .navbar-products{
+    /* position: absolute; */
+    width: 100;
+    display: flexbox;
+    margin: 3px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    /* border: .1rem solid rgba(0, 0, 0, 0.1); */
+}
 
 
 
+/* .popular .heading .box-container .box form {
+    flex: 1 1 50rem;
+    padding: 1rem;
+} 
+.popular .heading .box-container .box  form {
+    flex: 1 1 50rem;
+    padding: 1rem;
+} 
+
+.popular .heading .box-container .box form .inputBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+} */
 
 
 /* media queries */
@@ -569,8 +654,8 @@ header .navbar a:hover {
     }
 
     header .navbar a {
-        margin: 1.5rem;
-        padding: 1.5rem;
+        margin: 2rem;
+        padding: 2rem;
         display: block;
         border: .2rem solid rgba(0, 0, 0, 0.1);
         border-left: .5rem solid #e01021;

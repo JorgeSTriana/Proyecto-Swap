@@ -2,9 +2,10 @@ import Vue from 'vue';
 import Router from 'vue-router';
 /* import Login from '@views/auth/Login'; */
 import Swap from '@/views/Swap'
+import Error from '@/views/Error404';
 import Perfil from '@/views/Perfil';
 import Cambio from '@/views/Cambio';
-import Error from '@/views/Error404';
+
 
 
 
@@ -20,15 +21,16 @@ export default new Router({
             component: Swap
         },
         {
+            path: '*',     //cada ruta es un objeto path ruta a donde me dirijo despues del /
+            name: 'Error',
+            component: Error
+        },
+        {
             path: '/Perfil',     //cada ruta es un objeto path ruta a donde me dirijo despues del /
             name: 'perfil',
             component: Perfil
         },
-        {
-            path: '*',     //cada ruta es un objeto path ruta a donde me dirijo despues del /
-            name: 'error',
-            component: Error
-        },
+        
         {
             path: '/Cambio',     //cada ruta es un objeto path ruta a donde me dirijo despues del /
             name: 'Cambio',
