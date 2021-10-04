@@ -2,7 +2,7 @@
     <div>
         <!-- =================Header============= -->
         <header>
-                <a href="#" class="logo">
+                <a href="/Swap" class="logo">
                     <!-- <i class="fas fa-shoe-prints"></i>Swap -->
                     <img src="/img/logo_preview_rev_1.png" alt="" height="100">
                 </a>

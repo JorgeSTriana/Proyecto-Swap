@@ -5,7 +5,7 @@ import Swap from '@/views/Swap'
 import Error from '@/views/Error404';
 import Perfil from '@/views/Perfil';
 import Cambio from '@/views/Cambio';
-
+import Login from '@/views/Login';
 
 
 
@@ -35,6 +35,12 @@ export default new Router({
             path: '/Cambio',     //cada ruta es un objeto path ruta a donde me dirijo despues del /
             name: 'Cambio',
             component: Cambio
+        },
+
+        {
+            path: '/Login',     //cada ruta es un objeto path ruta a donde me dirijo despues del /
+            name: 'Login',
+            component: Login
         },
         /* {
             path: '/user/:id',

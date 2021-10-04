@@ -33,9 +33,10 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgb(152, 223, 199);
+    background: rgb(105, 208, 240);
     padding: 0 9%;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 120px;
 }
 
 /* header .logo{
@@ -82,7 +83,7 @@ header .navbar a:hover {
 
 .img-profile{
     clip-path: circle(40%);
-    width: 80%;
+    width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     transition: 1s;
@@ -187,6 +188,10 @@ header .navbar a:hover {
 
 .heading span {
     color: #e01021;
+}
+.popular{
+    margin-top: 60px;
+    padding-top: 60px;
 }
 
 .popular .box-container {
@@ -328,7 +333,9 @@ header .navbar a:hover {
     color: #666;
     padding: 1rem 0;
 }
-
+/* .review{
+    padding-top: 120px;
+} */
 .review .box-container{
     display: flex;
     flex-wrap: wrap;
@@ -598,6 +605,339 @@ header .navbar a:hover {
     /* border: .1rem solid rgba(0, 0, 0, 0.1); */
 }
 
+/* ==========================Estilos perfil========================== */
+
+.perfil{
+    display: inline-block;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 40px;
+    background: #666;
+    height: max-content;
+    width: 100%;
+}
+.perfilheading{
+    display: inline-block;
+    /* padding-top: 0px; */
+}
+.perfil .heading-perfil{
+    margin-top: 50px;
+    padding-top: 112px;
+    text-align: center;
+    font-size: 3rem;
+    padding: 1rem;
+    color: rgb(126, 119, 119);
+}
+
+.perfil .box-container-perfil{
+     display: flex;
+/*     flex-wrap: wrap; */
+    /*gap: 2rem; */
+    margin-left: auto;
+    margin-right: auto;
+    background:rgb(128, 125, 125);
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* .perfil .box-container-perfil .img-container-perfil{
+    height: 400px;
+    width: 100%;
+    /* position: absolute; 
+    margin-top: 3em;
+    float: left;
+} */
+.perfil .box-container-perfil .img-container{
+    /* position: absolute; */
+    margin-top: 5em;
+    margin-left: 2%;
+}
+
+.perfil .box-container-perfil .img-profile{
+    height: max-content;
+    clip-path: circle(40%);
+    width: 70%;
+    aspect-ratio: 1 / 1;
+    /* object-fit: cover;
+    transition: 1s; */
+}
+
+.perfil .box-container-perfil .img-profile:hover{
+    clip-path: circle(50%);
+}
+
+.perfil .box-container-perfil .img-container-perfil h3{
+    padding-top: 20px;
+    color: #000;
+}
+.perfil .box-container-perfil .img-container-perfil .star i {
+    color: red;
+    font-size: 1.7rem;
+    padding: 1rem .1rem;
+}
+.perfil .box-container-perfil .img-container-perfil .btn_content_perfil {
+    width: fit-content;
+    background: #e01021;
+    display: inline-block;
+    padding: .2rem 1rem;
+    border: .2rem solid #e01021;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;margin-top: 1rem;
+}
+.perfil .box-container-perfil .img-container-perfil .btn_content_perfil:hover {
+    color: #e01021;
+    background: #fff;
+}
+
+
+.perfil .box-container-perfil .mis-objetos{
+    float: left;
+    background-color: rgb(247, 242, 242);
+}
+.btns_form_perfil{
+    display: flexbox;
+    margin-left: auto;
+    margin-right: auto;
+    /* justify-content: space-between;
+    margin: 3rem; */
+}
+.btns_form_perfil .btn{
+    margin: 3px;
+    width: fit-content;
+}
+
+/* ==================== LOGIN FORM ======================== */
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.btn_content {
+    margin: 2rem;
+    background: #e01021;
+    display: inline-block;
+    padding: .8rem 3rem;
+    border: .2rem solid #e01021;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;margin-top: 1rem;
+}
+.btn_content:hover{
+    background-color: #fff;
+    color: #e01021;
+}
+button:hover {
+  opacity: 0.7;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #e01021;
+  border-radius: 5px;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+.imglog{
+    height: 50px;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+.container_btns{
+    padding: 6px;
+}
+
+.container_btns .cancelbtn {
+    margin: 2px;    
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 70px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 60%; /* Could be more or less, depending on screen size */
+  height: 80%;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+/* ======================= END LOGIN FORM ======================== */
+
+
+/* ======================= START REGISTER FORM ======================== */
+
+.content_reg {
+    padding-top: 60px;
+    /* box-sizing: border-box; 
+    margin-left: auto;
+    margin-right: auto; */
+  } 
+   
+  /* Add padding to containers */
+  .container_reg {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    padding: 16px;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Overwrite default styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  /* Set a style for the submit button */
+  .registerbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .registerbtn:hover {
+    opacity: 1;
+  }
+  
+  /* Add a blue text color to links */
+  a {
+    color: dodgerblue;
+  }
+  
+  /* Set a grey background color and center the text of the "sign in" section */
+  .signin {
+    background-color: #f1f1f1;
+    text-align: center;
+  }
+/* ======================= END REGISTER FORM ======================== */
+
+
+
+
 
 
 /* .popular .heading .box-container .box form {
@@ -630,6 +970,12 @@ header .navbar a:hover {
     section {
         padding: 2rem;
     }
+    .perfil{
+        padding-top: 50px;
+    }
+    .perfil .modal .order .row{
+        padding-top: 230px;
+    } 
 }
 
 @media(max-width:768px){

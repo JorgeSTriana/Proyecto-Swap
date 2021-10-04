@@ -11,6 +11,72 @@
             <section class="home" id="home">
 
                 <div class="content">
+                    <!-- <h2>Modal Login Form</h2> -->
+
+                    <button onclick="document.getElementById('id01').style.display='block'" class="btn_content" style="width:auto;">Login</button>
+                    <button onclick="document.getElementById('id02').style.display='block'" class="btn_content" style="width:auto;">Register</button>
+                    <div id="id01" class="modal">
+                    
+                        <form class="modal-content animate" action="" method="post">
+                            <div class="imgcontainer">
+<!--                                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+ -->                                <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+                                <!-- <div class="imglog"><i class="fas fa-user "></i></div> -->
+                                <img src="../../public/img/img-log.png" alt="Avatar" class="avatar">
+                            </div>
+
+                            <div class="container">
+                                <label for="uname"><b>Username</b></label>
+                                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                                <label for="psw"><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" name="psw" required>
+                                    
+                                <button type="submit">Login</button>
+                                <label>
+                                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                                </label>
+                            </div>
+
+                            <div class="container_btns" style="background-color:#f1f1f1">
+                                <button onclick="document.getElementById('id02').style.display='block'" class="cancelbtn" style="width:auto;">Register</button>
+                                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                                <span class="psw">Forgot <a href="#">password?</a></span>
+                            </div>
+                        </form>
+                    </div>
+                <!--==================== form of register =============-->
+                    <div id="id02" class="modal">
+                        <div class="content_reg">
+                            <form action="/action_page.php" class="">
+                                <div class="container_reg">
+                                    <h1>Register</h1>
+                                    <p>Please fill in this form to create an account.</p>
+                                    <hr>
+
+                                    <label for="email"><b>Email</b></label>
+                                    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+                                    <label for="psw"><b>Password</b></label>
+                                    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+                                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                                    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+                                    <hr>
+                                    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+                                    <button type="submit" class="registerbtn">Register</button>
+                                
+                                
+                                    <div class="container signin">
+                                        <p>Already have an account? <a href="#" onclick="document.getElementById('id02').style.display='none',document.getElementById('id01').style.display='block'">Sign in</a>.</p>
+                                        <button type="button" onclick="document.getElementById('id02').style.display='none',document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                                        <span class="psw">Forgot <a href="#">password?</a></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                     <!-- <h2>Our exclusive site</h2>
                     <h3>swap of all</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, 
@@ -20,7 +86,7 @@
                 </div>
                 <div class="image"> -->
                     <!-- <img src="/img/img_product3.jpg" alt=""> -->
-                    <a href="#" class="btn_content">Sign up</a>
+                    <!-- <a href="#" class="btn_content">Sign up</a> -->
                 </div>
 
             </section>
@@ -370,7 +436,8 @@
                             <input type="number" placeholder="phone">
                             <input type="text" placeholder="Object name">
                         </div>
-                        <textarea placeholder="description" name="" id="" cols="30" rows="10"></textarea>    
+                        <textarea placeholder="description" name="" id="" cols="30" rows="10"></textarea>  
+                        <textarea placeholder="intereses" name="" id="" cols="30" rows="10"></textarea>    
                         <input type="submit" value="share now" class="btn">                        
                     </form>
                 </div>
@@ -397,11 +464,13 @@
             <!-- scroll top button -->
 
             <a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
-
-            <!-- <script scr="app.js"></script> -->
+            
         <!-- </body> -->
     </div>
 </template>
+
+<script scr="../../public/js/app.js"></script> 
+
 
 <script>
     import AppHeader from '@/components/AppHeader.vue'
