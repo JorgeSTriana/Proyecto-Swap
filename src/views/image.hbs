@@ -1,8 +1,8 @@
 <div class="card">
-    <div class="card-header de-flex justify-content-between aling-items-center">
+    <div class="card-header d-flex justify-content-between aling-items-center">
           <h2>{{image.title}}</h2>
           <button class="btn btn-danger" id ="btn-delete" data-id ="{{image.uniqueId}}">
-          <i class="fa fa-times"> Eliminar</i>
+          <i class="fa fa-times"></i> 
           </button>
     </div>
     <div class="card-body">
@@ -37,7 +37,7 @@
     </button>
   </div>
   <div class="card-body">
-     <blockquote>
+     <blockquote id ="post-comment">
        <form action="/images/{{image.uniqueId}}/comment" method="POST">
          <div class="form-group">
            <input type="text" class="form-control" name = "name" placeholder = "Name">

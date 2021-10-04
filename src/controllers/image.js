@@ -5,6 +5,7 @@ const md5 = require('md5');
 
 const { Image, Comment } = require('../models');
 const { request } = require('https');
+const image = require('../models/image');
 
 const ctrl = {};
 
@@ -58,8 +59,15 @@ ctrl.create = (req,res) => {
     saveImage();    
 };
 
-ctrl.like = (req,res) => {
-    
+ctrl.like = async (req,res) => {
+    const image = await Image.findOne({filename: {$regex: req.params.image_id}});
+    if(image){
+        image.likes = image.likes + 1;
+        await image.save();
+        res.json({likes: image.likes});
+    }else{
+        res.status(500).json({error: "Internal error"});
+    }
 };
 
 ctrl.comment = async (req,res) => {
@@ -75,8 +83,15 @@ ctrl.comment = async (req,res) => {
     }
 };
 
-ctrl.remove = (req,res) => {
-    
+ctrl.remove =  async (req,res) => {
+    //console.log(req.params.image_id);
+    const image = await Image.findOne({filename: {$regex: req.params.image_id}});
+    if (image) {
+        await fs.unlink(path.resolve('./src/public/upload/'+image.filename));
+        await Comment.deleteOne({image_id: image.id});
+        await image.remove();
+        res.json(true);
+    }
 };
 
 
