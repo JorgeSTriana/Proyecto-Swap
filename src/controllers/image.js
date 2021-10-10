@@ -6,12 +6,13 @@ const md5 = require('md5');
 const { Image, Comment } = require('../models');
 const { request } = require('https');
 const image = require('../models/image');
+const sidebar = require('../helpers/sidebar');
 
 const ctrl = {};
 
 
 ctrl.index = async (req,res) => {
-       const viewModel = { image: {}, comments: {}};   
+       let viewModel = { image: {}, comments: {}};   
 
        const image= await Image.findOne({filename: {$regex: req.params.image_id}}); //expresiones regulares para consultar la imagen
        if(image){
@@ -19,7 +20,8 @@ ctrl.index = async (req,res) => {
         viewModel.image = image;
         await image.save();
         const comments =  await Comment.find({image_id: image._id});
-        viewModel.comments = comments;   
+        viewModel.comments = comments; 
+        viewModel = await sidebar(viewModel);  
         res.render('image', viewModel);
        }else{
            res.redirect('/')
