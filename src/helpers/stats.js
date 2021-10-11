@@ -9,15 +9,15 @@ async function commentsCounter() {
 }
 
 async function imageTotalViewsCounter() {
-  const result = await Image.aggregate([
-    {
-      $group: {
-        _id: "1",
-        viewsTotal: { $sum: "$views" },
-      },
-    },
-  ]);
-  return result[0].viewsTotal;
+  const result = await Image.aggregate([{$group: {
+    _id: '1',
+    viewsTotal: {$sum: '$views'}
+  }}]);
+  let viewsTotal = 0;
+  if(result.length > 0) {
+    viewsTotal += result[0].viewsTotal;
+  }
+  return viewsTotal;
 }
 
 async function likesTotalCounter() {
@@ -29,7 +29,11 @@ async function likesTotalCounter() {
       },
     },
   ]);
-  return result[0].likesTotal;
+  let likesTotal = 0;
+  if (result.length > 0) {
+    likesTotal += result[0].likesTotal;
+  }
+  return likesTotal;
 }
 
 module.exports = async () => {
