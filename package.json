@@ -1,10 +1,11 @@
 {
-  "name": "Proyecto-Swap",
+  "name": "proyectoswap",
   "version": "1.0.0",
   "description": "proyecto de intercambio de objetos",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
